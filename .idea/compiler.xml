@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.7">
+      <module name="Netflix.app" target="11" />
+      <module name="Netflix.buildSrc" target="11" />
+      <module name="Netflix.buildSrc.main" target="11" />
+      <module name="Netflix.buildSrc.test" target="11" />
+      <module name="Netflix.common" target="11" />
+      <module name="Netflix.data" target="11" />
+      <module name="Netflix.network" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

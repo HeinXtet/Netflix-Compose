@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Netflix</string>
+    <string name="home">Home</string>
+    <string name="games">Games</string>
+    <string name="new_hot">New &amp; Hot</string>
+    <string name="download">Downloads</string>
+    <string name="tv_show">TV Shows</string>
+    <string name="movies">Movies</string>
+    <string name="categories">Categories</string>
+    <string name="simple_category">Emotional . Romantic . Emotional . Romantic </string>
+    <string name="top_ten_thailand">Top Ten Movies in Thailand</string>
+    <string name="popular_movie_thailand">Popular Movie in Thailand</string>
+</resources>

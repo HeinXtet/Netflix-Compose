@@ -1,0 +1,87 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
+
+}
+
+android {
+    compileSdk App.targetSdk
+
+    defaultConfig {
+        applicationId "com.dee.netflix"
+        minSdk App.minSdk
+        targetSdk App.targetSdk
+        versionCode App.versionCode
+        versionName App.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion Versions.compose
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+            exclude 'META-INF/DEPENDENCIES'
+        }
+    }
+}
+
+dependencies {
+
+    implementation project(Modules.common)
+
+    implementation Libraries.coreKtx
+    implementation Libraries.composeUi
+    implementation Libraries.composeMaterial
+    implementation Libraries.composeToolingPreview
+    implementation Libraries.activityCompose
+
+    // viewmodel compose
+    implementation Libraries.composeViewModel
+    implementation Libraries.composeViewModelNavGraph
+
+    implementation Libraries.systemuicontroller
+    implementation "androidx.constraintlayout:constraintlayout-compose:1.1.0-alpha03"
+    implementation "androidx.compose.foundation:foundation-layout:1.1.1"
+    implementation 'androidx.compose.runtime:runtime-livedata:1.3.0-alpha01'
+
+    //hilt
+    implementation Libraries.daggerHilt
+    kapt Libraries.daggerHiltKapt
+
+    implementation Libraries.lifecycleRuntime
+
+    testImplementation TestingLibraries.junit
+    androidTestImplementation TestingLibraries.junitExt
+    androidTestImplementation TestingLibraries.espresso
+    androidTestImplementation TestingLibraries.composeJunit
+    debugImplementation TestingLibraries.composeUiTooling
+    debugImplementation TestingLibraries.composeManifest
+
+    implementation project(":domain")
+
+
+}
