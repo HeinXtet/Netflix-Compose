@@ -21,6 +21,11 @@ class GameViewModel @Inject constructor()  :ViewModel(){
                 title = "Sex Education",
                 backgroundRes = com.dee.common.R.drawable.sex_education_background,
                 iconRes = com.dee.common.R.drawable.squard_game_poster
+            ),
+            GameModel(
+                title = "Sex Education 2",
+                backgroundRes = com.dee.common.R.drawable.sex_education_background,
+                iconRes = com.dee.common.R.drawable.squard_game_poster
             )
         )
     )
